@@ -2,7 +2,7 @@
 
 my personal story by Federica Gazzelloni
 
-On 11 Of March the disease of Covid19 was officially declared Pandemic by the WHO; Coronavirus exploded Worldwide very fast, in just 50 days, less than two months, Globally confirmed were 118,319 cases, 4,292 deaths and 114 Countries involved. F. Gazzelloni tells the story of the impact of the Pandemic on Italian mortality as the third Country with the highest number of deaths caused by the virus.
+On 11 Of March the disease of Covid19 was officially declared Pandemic by the WHO; The Novel Coronavirus exploded Worldwide very fast, in just 50 days, less than two months, Globally confirmed were 118,319 cases, 4,292 deaths and 114 Countries involved. F. Gazzelloni tells the story of the impact of the Pandemic on Italian mortality as the third Country with the highest number of deaths caused by the virus.
 
 The impact on mortality trend of Coronavirus outbreak is one important cause of death. 
 
