@@ -110,9 +110,10 @@ write.table(s,file="it_covid19.txt",row.names = TRUE)
 
 it_covid19<-read.table(file="it_covid19.txt",header = TRUE)
 
+
+#data reference_hospitalization
 library(readr)
 write.csv(s,file="it_covid19.csv",row.names = TRUE)
-
 ```
 
 
