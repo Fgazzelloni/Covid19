@@ -1,0 +1,123 @@
+---
+title: "IHME_analysis"
+author: "FG"
+date: "12/29/2020"
+output: html_document
+
+---
+
+```{r setup, include=FALSE}
+library(ihme.covid)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# IHME data manipulation
+
+```{r}
+library(downloader)
+url="https://ihmecovid19storage.blob.core.windows.net/archive/2021-01-15/ihme-covid19.zip"
+download(url, dest="ihme-covid19.zip", mode="wb") 
+unzip ("ihme-covid19.zip", exdir = "./")
+
+library(readr)
+ihme_covid<- read.csv("2021-01-15/reference_hospitalization_all_locs.csv",header=TRUE)
+library(dplyr)
+glimpse(ihme_covid)
+```
+
+
+```{r}
+ihme_covid_back_up<-ihme_covid
+
+names(ihme_covid_back_up)
+location_name<-ihme_covid_back_up$location_name
+location_id<-ihme_covid_back_up$location_id
+length(unique(location_name))#389
+length(unique(location_id))#391
+
+
+check_duplicated<-ihme_covid_back_up%>%
+  group_by(location_name,location_id)%>%
+  summarize()
+
+dim(check_duplicated)
+
+check_duplicated$location_name[duplicated(check_duplicated$location_name)]
+
+first_duplicated<-check_duplicated%>%
+  filter(location_name=="Georgia")
+
+second_duplicated<-check_duplicated%>%
+  filter(location_name=="Punjab")
+
+
+doubles<-rbind(first_duplicated,second_duplicated)
+
+
+doubles
+
+```
+
+
+```{r}
+location_name<-unique(ihme_covid_back_up$location_name)
+length(location_name)
+```
+
+```{r}
+it_regions<-c("Abruzzo",
+              "Valle d'Aosta",
+              "Puglia",
+              "Basilicata",
+              "Calabria",
+              "Campania",
+              "Emilia-Romagna",
+              "Friuli-Venezia Giulia",
+              "Lazio",
+              "Liguria",
+              "Lombardia",
+              "Molise",
+              "Piemonte",
+              "Sardegna",
+              "Sicilia",
+              "Marche",
+              "Toscana",
+              "Umbria",
+              "Veneto",
+              "Provincia autonoma di Bolzano",
+              "Provincia autonoma di Trento")
+
+location_name[grepl("^P",location_name)]
+
+s<-ihme_covid_back_up%>%
+  as.data.frame()%>%
+  #select(location_name,location_id)%>%
+  filter(location_name==it_regions)%>%
+  select(-V1,-location_id)%>%
+  mutate(round("allbed_mean",3))
+  
+names(s)
+library(data.table)
+glimpse(s)
+
+library(dplyr)
+s<-s %>% 
+ mutate_if(is.numeric, round)
+
+data.table(s)
+
+write.table(s,file="it_covid19.txt",row.names = TRUE)
+
+it_covid19<-read.table(file="it_covid19.txt",header = TRUE)
+
+library(readr)
+write.csv(s,file="it_covid19.csv",row.names = TRUE)
+
+```
+
+
+
+
+
+
+
