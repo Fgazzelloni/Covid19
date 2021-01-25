@@ -26,43 +26,7 @@ glimpse(ihme_covid)
 ```
 
 
-```{r}
-ihme_covid_back_up<-ihme_covid
 
-names(ihme_covid_back_up)
-location_name<-ihme_covid_back_up$location_name
-location_id<-ihme_covid_back_up$location_id
-length(unique(location_name))#389
-length(unique(location_id))#391
-
-
-check_duplicated<-ihme_covid_back_up%>%
-  group_by(location_name,location_id)%>%
-  summarize()
-
-dim(check_duplicated)
-
-check_duplicated$location_name[duplicated(check_duplicated$location_name)]
-
-first_duplicated<-check_duplicated%>%
-  filter(location_name=="Georgia")
-
-second_duplicated<-check_duplicated%>%
-  filter(location_name=="Punjab")
-
-
-doubles<-rbind(first_duplicated,second_duplicated)
-
-
-doubles
-
-```
-
-
-```{r}
-location_name<-unique(ihme_covid_back_up$location_name)
-length(location_name)
-```
 
 ```{r}
 it_regions<-c("Abruzzo",
