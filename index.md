@@ -1,37 +1,33 @@
-## Welcome to GitHub Pages
+## Welcome to Covid19 Outbreak project
 
-You can use the [editor on GitHub](https://github.com/Fgazzelloni/Covid19/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This pages are about Covdi19 Outbreak
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+##  Introduction
+### Chapeter 1: The Pandemic origins
+### Chapeter 2: Global invasion
+### Chapeter 3: The Mutations
+### Chapeter 4: The Cure
+### Chapeter 5: The Epilogue
+### Chapeter 6: The Recovery
+### Conclusions
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+![World Covid](src)
 ```
+### Data sources and programming language:
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+- World Health Organization [WHO](https://www.who.int/) 
+- John Hopkins University [JHU](https://coronavirus.jhu.edu/map.html) 
+- Italy: Civil Protection GitHub repository [PCM](https://github.com/pcm-dpc/COVID-19) 
+- Institute for Health Metric Evaluations [IHME](http://www.healthdata.org/) 
+- European Centre for Disease Prevention and Control [ECDC](https://www.ecdc.europa.eu/en)
+- RStudio [R](https://rstudio.com/)
 
-### Jekyll Themes
+### The Author
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Fgazzelloni/Covid19/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Federica Gazzelloni [Covid19 repository](https://github.com/Fgazzelloni/Covid19/). 
 
-### Support or Contact
+### Contacts
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+For more details please [contact](https://www.linkedin.com/in/fgazzelloni/) or [email](docksbox@pm.me) Thanks for information and support.
